@@ -519,7 +519,8 @@ def download_hls_mp3(track, title):
         "ffmpeg -i {0} -c copy {1} -loglevel fatal".format(
             '"' + url + '"',
             '"' + filename + '"'
-        )
+        ),
+        shell=True
     )
     return filename
 
